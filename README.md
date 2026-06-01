@@ -19,7 +19,6 @@ To write a PYTHON program for socket for HTTP for web page upload and download
 server:
 ```
 import socket
-
 s = socket.socket()
 s.bind(("localhost", 3024))
 s.listen(1)
@@ -51,12 +50,9 @@ while True:
 client:
 ```
 import socket
-
 s = socket.socket()
 s.connect(("localhost", 3024))
-
 ch = input("1.Download  2.Upload : ")
-
 if ch == "1":
     req = "GET / HTTP/1.1\nHost: localhost\n\n"
     s.send(req.encode())
@@ -71,19 +67,11 @@ else:
 
 s.close()
 ```
-index.html:
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <p>hello world</p>
-</body>
-</html>
 ```
 ## OUTPUT
+```
+<img width="1034" height="363" alt="Screenshot 2026-06-01 103422" src="https://github.com/user-attachments/assets/a4689e00-ee57-42ef-a39c-737f48b278dd" />
+<img width="1024" height="380" alt="Screenshot 2026-06-01 103437" src="https://github.com/user-attachments/assets/28884da0-45f9-4710-a564-64697af7f2a6" />
+
 ## Result
 Thus the socket for HTTP for web page upload and download created and Executed
